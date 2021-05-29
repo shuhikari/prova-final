@@ -6,28 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.ViniciusAlvesCandido.dao.funcionarioDao;
-import br.com.ViniciusAlvesCandido.domain.Funcionario;
+import br.com.ViniciusAlvesCandido.dao.ClienteDao;
+import br.com.ViniciusAlvesCandido.domain.Cliente;
 
 
 @Service
 @Transactional(readOnly = true)
-public class FuncionarioServiceImpl implements FuncionarioService {
+public class ClienteServiceImpl implements ClienteService {
 
 	@Autowired
-	private funcionarioDao dao;
+	private ClienteDao dao;
 	
 	@Transactional(readOnly = false)
 	@Override
-	public void salvar(Funcionario funcionario) {
-		dao.save(funcionario);
+	public void salvar(Cliente cliente) {
+		dao.save(cliente);
 		
 	}
 
 	@Transactional(readOnly = false)
 	@Override
-	public void editar(Funcionario funcionario) {
-		dao.update(funcionario);
+	public void editar(Cliente cliente) {
+		dao.update(cliente);
 		
 	}
 
@@ -40,13 +40,13 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 	}
 	@Transactional(readOnly = true)
 	@Override
-	public Funcionario buscaPorId(Long id) {
+	public Cliente buscaPorId(Long id) {
 		
 		return dao.findById(id);
 	}
 	@Transactional(readOnly = true)
 	@Override
-	public List<Funcionario> buscarTodos() {
+	public List<Cliente> buscarTodos() {
 		
 		return dao.findAll();
 	}
