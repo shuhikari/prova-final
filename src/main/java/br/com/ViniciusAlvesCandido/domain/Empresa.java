@@ -15,7 +15,7 @@ public class Empresa extends AbstractEntity<Long> {
 	private String nome;
 	
 	@OneToMany(mappedBy = "empresa")
-	private List<Cargo> cargos;
+	private List<Profissao> profissaos;
 
 	public String getNome() {
 		return nome;
@@ -25,12 +25,12 @@ public class Empresa extends AbstractEntity<Long> {
 		this.nome = nome;
 	}
 
-	public List<Cargo> getCargos() {
-		return cargos;
+	public List<Profissao> getCargos() {
+		return profissaos;
 	}
 
-	public void setCargos(List<Cargo> cargos) {
-		this.cargos = cargos;
+	public void setCargos(List<Profissao> profissaos) {
+		this.profissaos = profissaos;
 	} 
 	
 	

@@ -52,12 +52,12 @@
 	            </ul>
 	
 	            <ul class="nav nav-pills">
-	                <li class="nav-item"><span class="nav-link active">Cargos</span></li>
+	                <li class="nav-item"><span class="nav-link active">Profissoes</span></li>
 	                <li class="nav-item"><a class="nav-link"
-	                                        href="/cargos/cadastrar"> <i class="oi oi-plus"></i> <span>Cadastrar </span>
+	                                        href="/profissoes/cadastrar"> <i class="oi oi-plus"></i> <span>Cadastrar </span>
 	                </a></li>
 	                <li class="nav-item"><a class="nav-link"
-	                                        href="/cargos/listar"> <i
+	                                        href="/profissoes/listar"> <i
 	                        class="oi oi-spreadsheet"></i> <span>Listar </span>
 	                </a></li>
 	            </ul>
@@ -99,8 +99,8 @@
 	                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNome"
 	                        aria-controls="collapseNome">Nome
 	                </button>
-	                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseCargo"
-	                        aria-controls="collapseCargo">Cargo
+	                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseProfissao"
+	                        aria-controls="collapseProfissao">Profissao
 	                </button>
 	                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseData"
 	                        aria-controls="collapseData">Datas
@@ -123,12 +123,12 @@
 	            </div>
 	            <div class="row">
 	                <div class="col">
-	                    <div class="collapse" id="collapseCargo">
+	                    <div class="collapse" id="collapseProfissao">
 	
 	                        <nav class="navbar navbar-light bg-light">
-	                            <form class="form-inline" method="GET" action="/funcionarios/buscar/cargo">
-	                                <select class="form-control mr-sm-2" name="cargo" aria-label="Search">
-	                                    <option value="">Cargo</option>
+	                            <form class="form-inline" method="GET" action="/funcionarios/buscar/profissao">
+	                                <select class="form-control mr-sm-2" name="profissao" aria-label="Search">
+	                                    <option value="">Profissao</option>
 	                                    <option value="1">Auxiliar Contábil</option>
 	                                    <option value="2">Auxiliar Administrativo</option>
 	                                    <option value="3">Contador</option>
@@ -175,7 +175,7 @@
 	                        <th>Nome</th>
 	                        <th>Salário</th>
 	                        <th>Empresa</th>
-	                        <th>Cargo</th>
+	                        <th>Profissao</th>
 	                        <th>Endereço</th>
 	                        <th>Data de Entrada</th>
 	                        <th>Data de Saída</th>

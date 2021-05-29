@@ -37,7 +37,7 @@ public class Funcionario extends AbstractEntity<Long> {
 	
 	@ManyToOne
 	@JoinColumn(name = "cargo_id_fk")
-	private Cargo cargo;
+	private Profissao profissao;
 	
 	
 	
