@@ -2,30 +2,30 @@ package br.com.ViniciusAlvesCandido.service;
 
 import java.util.List;
 
+import br.com.ViniciusAlvesCandido.domain.Empresa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.ViniciusAlvesCandido.dao.DepartamentoDao;
-import br.com.ViniciusAlvesCandido.domain.Departamento;
+import br.com.ViniciusAlvesCandido.dao.EmpresaDao;
 
 
 @Service
-public class DepartamentoServiceImpl implements DepartamentoService{
+public class EmpresaServiceImpl implements EmpresaService {
 
 	@Autowired
-	private DepartamentoDao dao;
+	private EmpresaDao dao;
 	
 	@Transactional(readOnly = false)
 	@Override
-	public void salvar(Departamento departamento) {
-		dao.save(departamento);
+	public void salvar(Empresa empresa) {
+		dao.save(empresa);
 		
 	}
 	@Transactional(readOnly = false)
 	@Override
-	public void editar(Departamento departamento) {
-		dao.update(departamento);
+	public void editar(Empresa empresa) {
+		dao.update(empresa);
 		
 	}
 	@Transactional(readOnly = false)
@@ -36,13 +36,13 @@ public class DepartamentoServiceImpl implements DepartamentoService{
 	}
 	@Transactional(readOnly = true)
 	@Override
-	public Departamento buscaPorId(Long id) {
+	public Empresa buscaPorId(Long id) {
 		
 		return dao.findById(id);
 	}
 	@Transactional(readOnly = true)
 	@Override
-	public List<Departamento> buscarTodos() {
+	public List<Empresa> buscarTodos() {
 		
 		return dao.findAll();
 	}

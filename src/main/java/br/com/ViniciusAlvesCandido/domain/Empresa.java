@@ -8,13 +8,13 @@ import javax.persistence.*;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "DEPARTAMENTOS")
-public class Departamento extends AbstractEntity<Long> {
+@Table(name = "EMPRESAS")
+public class Empresa extends AbstractEntity<Long> {
 
 	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 	
-	@OneToMany(mappedBy = "departamento")
+	@OneToMany(mappedBy = "empresa")
 	private List<Cargo> cargos;
 
 	public String getNome() {

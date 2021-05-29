@@ -16,8 +16,8 @@ public class Cargo extends AbstractEntity<Long> {
 	private String nome;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_departamento_fk")
-	private Departamento departamento;
+	@JoinColumn(name = "id_empresa_fk")
+	private Empresa empresa;
 
 	public String getNome() {
 		return nome;
@@ -27,12 +27,12 @@ public class Cargo extends AbstractEntity<Long> {
 		this.nome = nome;
 	}
 
-	public Departamento getDepartamento() {
-		return departamento;
+	public Empresa getEmpresa() {
+		return empresa;
 	}
 
-	public void setDepartamento(Departamento departamento) {
-		this.departamento = departamento;
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 	
 	
